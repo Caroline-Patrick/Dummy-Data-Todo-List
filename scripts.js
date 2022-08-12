@@ -25,6 +25,7 @@
         fetch('https://jsonplaceholder.typicode.com/todos')
             .then( (response) => response.json())
             .then( (d) => arrayOfTodos = d)
+            .then(console.log("complete"))
                
               
             }
@@ -49,14 +50,14 @@
 
 
 
-        for (let i = 0; i < 201; i++) {
+        for (let i = 0; i < arrayOfTodos.length; i++) {
 
-            const todoList = document.getElementById("todo-list")
+            let todoList = document.getElementById("todo-list")
            
-            const element = document.createElement("li")  //creating variable, "element", which stands for the 'li' element we are creating in the document - with createElement method
+            let element = document.createElement("li")  //creating variable, "element", which stands for the 'li' element we are creating in the document - with createElement method
 
-            element.innerHTML = arrayOfTodos[i].userId // these are directions to go into the created 'li' element (variable name =element) and add some HTML code to it. 
-            
+             let textNode = document.createTextNode(arrayOfTodos[i].userId) // these are directions to go into the created 'li' element (variable name =element) and add some HTML code to it. 
+            element.appendChild(textNode)
             // Specifically, we are adding it as an image. The image we are adding is the 'avatar' key from each JSON object. 
 
             //d.data[i].avatar - "d" is JSON-styled data. "data" is an array within "d" we are accessing (array of  6 objects, indexed 0-5), [i] stands for the object w/in 'data' array we are accessing, and then 'avatar' is one of the keys we are targeting on the object (in this case it's an image)
