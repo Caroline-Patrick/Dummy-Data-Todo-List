@@ -82,16 +82,40 @@
 
     } //keeping this button's only function for clearing
 
-    let userFilter
-
-    const setValueFilter = (input) => {
-        userFilter = input 
-        console.log({input})
-
-    }
 
 
-    let filterID =() => {
-      
 
-    }
+    let printFilter =() => {
+      document.getElementById("todo-list").innerHTML= null //clears the printed log again
+
+      let todoList = document.getElementById("todo-list")
+      let num = document.getElementById("number-input").value
+     
+      let filteredArray = arrayOfTodos.filter(array => array.userId == num)
+
+      for (let i = 0; i < filteredArray.length; i++) {
+  
+      let element = document.createElement("li")  //creating variable, "element", which 
+      element.innerHTML = filteredArray[i].userId
+ 
+      todoList.appendChild(element)//
+    }}
+
+
+    
+    let completedToDos = () => {
+      document.getElementById("todo-list").innerHTML= null //clears the printed log again
+
+      let todoList = document.getElementById("todo-list")
+      let num = document.getElementById("number-input").value
+     
+      let filteredArray = arrayOfTodos.filter(array => array.userId == num)
+
+      for (let i = 0; i < filteredArray.length; i++) {
+  
+      let element = document.createElement("li")  //creating variable, "element", which 
+      element.innerHTML = filteredArray[i].userId
+ 
+      todoList.appendChild(element)
+
+    }}

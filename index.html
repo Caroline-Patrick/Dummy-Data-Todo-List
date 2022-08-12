@@ -13,14 +13,17 @@
    <br>
    <br>
     <label for="number-input">Select user ID to filter by:</label>
-    <input type="number" id="number-input"  min="1" max="10" value="" onkeyup="setValueFilter(this.value)"/>
+    <input type="number" id="number-input"  min="1" max="10" value=""/>
     
     <label for="user-id-log"></label>
-    <input type="submit" id="number-input" value="Submit"/>
+    <input type="submit" value="Submit" onclick="printFilter()"/>
 
     <br>
     <br>
-     
+    <button onclick="completedToDos()">Completed To Dos by Selected User ID</button>
+    <button onclick="incompleteToDos()">Incomplete To Dos by Selected User ID</button>
+    <br>
+    <br>
     <button onclick="clearToDos()">Clear</button>
         <ol id="todo-list">
     <!-- LIs will go here -->
