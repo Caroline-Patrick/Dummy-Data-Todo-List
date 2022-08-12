@@ -78,11 +78,20 @@
     //   element = null
     // }
     const clearToDos = () => {
-      document.getElementById("todo-list").innerHTML= null
+      document.getElementById("todo-list").innerHTML= null    
 
+    } //keeping this button's only function for clearing
+
+    let userFilter
+
+    const setValueFilter = (input) => {
+        userFilter = input 
+        console.log({input})
+
+    }
+
+
+    let filterID =() => {
       
-
-    
-
 
     }
