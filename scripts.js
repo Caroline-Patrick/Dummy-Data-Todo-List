@@ -74,7 +74,15 @@
     }
     }
 
-    // const clearTodos = () => {
+    // cocnst clearTodos = () => {
     //   element = null
     // }
+    const clearToDos = () => {
+      document.getElementById("todo-list").innerHTML= null
+
+      
+
     
+
+
+    }
